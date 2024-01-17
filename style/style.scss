@@ -1,0 +1,185 @@
+// Fonts
+
+@font-face {
+    font-family: "Pompiere-Regular";
+    src: url(fonts/Pompiere-Regular.ttf) format('truetype'),
+        url(fonts/Pompiere-Regular.eot) format('embedded-opentype'),
+        url(fonts/Pompiere-Regular.otf) format('opentype'),
+        url(fonts/Pompiere-Regular.woff) format('woff'),
+        url(fonts/Pompiere-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "Sybelia";
+    src: url(fonts/Sybelia-Demo.ttf) format('truetype'),
+        url(fonts/Sybelia-Demo.eot) format('embedded-opentype'),
+        url(fonts/Sybelia-Demo.otf) format('opentype'),
+        url(fonts/Sybelia-Demo.woff) format('woff'),
+        url(fonts/Sybelia-Demo.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "OratorStd";
+    src: url(fonts/OratorStd.ttf) format('truetype'),
+        url(fonts/OratorStd.eot) format('embedded-opentype'),
+        url(fonts/OratorStd.otf) format('opentype'),
+        url(fonts/OratorStd.woff) format('woff'),
+        url(fonts/OratorStd.woff2) format('woff2');
+}
+
+// Importing fontawesome core styling file
+@import "fonts/fontawesome/scss/fontawesome.scss";
+
+// Importing fontawesome per Project Needs
+@import "fonts/fontawesome/scss/solid.scss";
+@import "fonts/fontawesome/scss/brands.scss";
+
+// main
+.container {
+    #first {
+    background-image: url("bg-images/header-bg-img.jpg");
+    background-attachment: fixed;
+    }
+}
+h1 {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 43px;
+    font-weight: inherit;
+    color: #212529;
+}
+h2 {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: inherit;
+    color: #212529;
+}
+h3 {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: inherit;
+    color: #212529;
+}
+body {
+    img {
+    width: 100%;
+    }
+    p,a {
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: #212529;
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid #3e4c55;
+            width: 0;
+            -webkit-transition: width 0.3s ease-in-out;
+            transition: width 0.3s ease-in-out;
+        }  
+        &:hover::after {
+            width: 15%;
+            border-bottom: 2px solid #3e4c55;
+        }         
+    }       
+}
+
+.content-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+
+// Section One
+.main-menu {
+    .menu-left, .menu-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;   
+    }
+    .menu-left {
+        .logo {
+            width: 37px;;
+        }
+    }
+    .menu-right {
+        .line1, .line2, .line3 {
+            width: 30px;
+            height: 4px;
+            display: block;
+            background: white;
+            margin-bottom: 5px;
+        }
+    }
+    
+}
+
+// Section Two
+#three-cols .inline {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 25%;
+    margin-right: 5em;
+    position: relative;
+    &:last-child {
+        margin-right: 0;
+    }   
+    .overlay {
+        text-align: center;
+        visibility: hidden;
+        background: white;
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        padding: 30px 0;
+        font-size: 21px;
+        opacity: 0.8;
+        -webkit-transform: scaleY(0);
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover .overlay {
+        visibility: visible;
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+
+    }
+}
+
+// Section Three
+#two-cols {
+    .left, .right {
+        display: inline-block;
+        width: 46%;
+        vertical-align: top;   
+    }
+    .quote {
+        h1 {
+            padding: 0 0 20px 0;
+        }
+        &::before {
+            @include fa-icon-solid($fa-var-quote-left);
+        }
+        .quotee {
+            font-size: 13px;
+            color: #c4c4c4;
+        }
+        p {
+            font-size: 13px;
+            color: #c4c4c4;
+        }
+    }
+    .right {
+        p {
+            font-family: "Pompiere-Regular", Arial, Helvetica, sans-serif;
+            font-size: 19px;
+        }
+    }
+}
