@@ -24,7 +24,7 @@
 .fa-sharp,
 .fas,
 .fa-solid,
-#two-cols .quote::before,
+#two-cols .quote h1::before,
 .far,
 .fa-regular,
 .fab,
@@ -40,7 +40,7 @@
 .fas,
 .fa-classic,
 .fa-solid,
-#two-cols .quote::before,
+#two-cols .quote h1::before,
 .far,
 .fa-regular {
   font-family: 'Font Awesome 6 Free'; }
@@ -49,7 +49,7 @@
 .fa-brands {
   font-family: 'Font Awesome 6 Brands'; }
 
-#two-cols .quote::before {
+#two-cols .quote h1::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -6239,7 +6239,7 @@ readers do not read off random characters that represent icons */
 
 .fas,
 .fa-solid,
-#two-cols .quote::before {
+#two-cols .quote h1::before {
   font-weight: 900; }
 
 /*!
@@ -7824,7 +7824,8 @@ h1 {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   font-size: 43px;
   font-weight: inherit;
-  color: #212529; }
+  color: #212529;
+  text-align: center; }
 
 h2 {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
@@ -7838,25 +7839,26 @@ h3 {
   font-weight: inherit;
   color: #212529; }
 
-body img {
-  width: 100%; }
-
-body p, body a {
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
-
-body a {
-  text-decoration: none;
-  color: #212529; }
-  body a::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid #3e4c55;
-    width: 0;
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
-  body a:hover::after {
-    width: 15%;
-    border-bottom: 2px solid #3e4c55; }
+body {
+  color: #212529;
+  font-size: 17px; }
+  body img {
+    width: 100%; }
+  body p, body a {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  body a {
+    text-decoration: none;
+    color: #212529; }
+    body a::after {
+      content: "";
+      display: block;
+      border-bottom: 2px solid #3e4c55;
+      width: 0;
+      -webkit-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out; }
+    body a:hover::after {
+      width: 100%;
+      border-bottom: 2px solid #3e4c55; }
 
 .content-wrapper {
   max-width: 1170px;
@@ -7917,10 +7919,9 @@ body a {
   vertical-align: top; }
 
 #two-cols .quote h1 {
-  padding: 0 0 20px 0; }
-
-#two-cols .quote::before::before {
-  content: "\f10d"; }
+  text-align: left; }
+  #two-cols .quote h1::before::before {
+    content: "\f10d"; }
 
 #two-cols .quote .quotee {
   font-size: 13px;
@@ -7933,3 +7934,26 @@ body a {
 #two-cols .right p {
   font-family: "Pompiere-Regular", Arial, Helvetica, sans-serif;
   font-size: 19px; }
+
+#third {
+  background: url("bg-images/bg-green.jpg") no-repeat fixed center/cover; }
+  #third h1, #third p, #third a, #third div {
+    text-align: center;
+    color: #ffffff; }
+  #third p {
+    font-size: 22px; }
+  #third .event-day-wrapper .event-date {
+    display: inline-block;
+    font-size: 32px;
+    margin-right: 1.5em; }
+    #third .event-day-wrapper .event-date .date {
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.7);
+      width: 70px;
+      border-radius: 5px;
+      color: #212529;
+      text-shadow: 1px 2px 3px #797979; }
+
+#three-cols .view-row .inline {
+  margin-right: 20px;
+  width: 30%; }
