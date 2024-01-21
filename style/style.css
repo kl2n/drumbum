@@ -7827,7 +7827,7 @@ h1 {
   color: #212529;
   text-align: center; }
 
-h2 {
+h2, .rw-hover-effect .title {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: inherit;
@@ -7844,7 +7844,7 @@ body {
   font-size: 17px; }
   body img {
     width: 100%; }
-  body p, body a {
+  body p, body a, body .date, body .rw-hover-effect .title {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
   body a {
     text-decoration: none;
@@ -7859,6 +7859,11 @@ body {
     body a:hover::after {
       width: 100%;
       border-bottom: 2px solid #3e4c55; }
+
+.right p,
+.rw-hover-effect .description {
+  font-family: "Pompiere-Regular", Arial, Helvetica, sans-serif;
+  font-size: 19px; }
 
 .content-wrapper {
   max-width: 1170px;
@@ -7931,10 +7936,6 @@ body {
   font-size: 13px;
   color: #c4c4c4; }
 
-#two-cols .right p {
-  font-family: "Pompiere-Regular", Arial, Helvetica, sans-serif;
-  font-size: 19px; }
-
 #third {
   background: url("bg-images/bg-green.jpg") no-repeat fixed center/cover; }
   #third h1, #third p, #third a, #third div {
@@ -7947,13 +7948,47 @@ body {
     font-size: 32px;
     margin-right: 1.5em; }
     #third .event-day-wrapper .event-date .date {
+      font-weight: 700;
       padding: 18px;
       background: rgba(255, 255, 255, 0.7);
       width: 70px;
       border-radius: 5px;
       color: #212529;
-      text-shadow: 1px 2px 3px #797979; }
+      text-shadow: 1px 2px 0 #797979; }
 
-#three-cols .view-row .inline {
-  margin-right: 20px;
-  width: 30%; }
+#three-cols .view-row {
+  text-align: center; }
+  #three-cols .view-row .rw-three-cols {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    width: 30%;
+    position: relative; }
+    #three-cols .view-row .rw-three-cols .rw-hover-effect {
+      visibility: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    #three-cols .view-row .rw-three-cols .border-wrap {
+      position: absolute;
+      border: 5px solid #dfdfdf;
+      width: 93%;
+      height: 92%;
+      top: 2%;
+      right: 2%;
+      color: #dfdfdf;
+      transform: 50%, 50%;
+      transition: all 0.3s ease-in-out; }
+      #three-cols .view-row .rw-three-cols .border-wrap .rw-info {
+        padding: 3em 0;
+        max-width: 90%;
+        margin: 0 auto; }
+        #three-cols .view-row .rw-three-cols .border-wrap .rw-info .title {
+          color: #dfdfdf;
+          padding-bottom: 1.5em; }
+    #three-cols .view-row .rw-three-cols:hover img {
+      filter: brightness(30%); }
+    #three-cols .view-row .rw-three-cols:hover .rw-hover-effect {
+      visibility: visible; }
