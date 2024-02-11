@@ -7848,17 +7848,43 @@ body {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
   body a {
     text-decoration: none;
-    color: #c4c4c4; }
-    body a::after {
+    font-size: 13px;
+    color: #c4c4c4;
+    position: relative;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    -webkit-transition: all .20s ease;
+    -moz-transition: all .20s ease;
+    -ms-transition: all .20s ease;
+    transition: all .20s ease; }
+    body a::before, body a::after {
       content: "";
       display: block;
-      border-bottom: 2px solid #3e4c55;
-      width: 0;
-      -webkit-transition: width 0.3s ease-in-out;
-      transition: width 0.3s ease-in-out; }
-    body a:hover::after {
-      width: 100%;
-      border-bottom: 2px solid #3e4c55; }
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+      -webkit-transition: all .20s ease;
+      -moz-transition: all .20s ease;
+      -ms-transition: all .20s ease;
+      transition: all .20s ease; }
+    body a::before {
+      border-top: 2px solid #212529;
+      border-right: 2px solid #8d9195;
+      top: 0;
+      right: 0;
+      transform: translate(-72%, 36%); }
+    body a::after {
+      border-bottom: 2px solid #212529;
+      border-left: 2px solid #8d9195;
+      bottom: 0;
+      left: 0;
+      transform: translate(72%, -36%); }
+    body a:hover {
+      color: #212529; }
+      body a:hover::before, body a:hover::after {
+        transform: translate(0, 0);
+        opacity: 1; }
 
 .right p,
 .rw-hover-effect .description {
@@ -7956,17 +7982,6 @@ body {
       color: #212529;
       text-shadow: 1px 2px 0 #797979; }
 
-#fourth .more-btn {
-  text-align: right;
-  display: block; }
-  #fourth .more-btn::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: #e6e5e5;
-    margin: 10px 0; }
-
 #three-cols .view-row {
   text-align: center; }
   #three-cols .view-row .rw-three-cols {
@@ -8012,6 +8027,16 @@ body {
       -moz-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1); }
+
+.view-row-footer {
+  text-align: right; }
+  .view-row-footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #e6e5e5;
+    margin: 10px 0; }
 
 #fifth {
   background-color: #e6e5e5; }
