@@ -43,13 +43,13 @@ h1 {
     color: #212529;
     text-align: center;
 }
-h2, .rw-hover-effect .title {
+h2, .rw-hover-effect, .title-lg {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 32px;
     font-weight: inherit;
     color: #212529;
 }
-h3 {
+h3, .title-sm {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: inherit;
@@ -298,7 +298,7 @@ body {
                 justify-content: center;
                 flex-direction: column;
                 line-height: 1.5;
-                .title {
+                .title-lg {
                     color: #dfdfdf;
                     padding-bottom: 1.5em;
                 }
@@ -342,9 +342,41 @@ body {
 
 // Section Six
 .logo-wrapper {
-        width: 20%;
-        margin: 0 20px 0 0;
-        &:last-child {
-            margin: 0;
-        }
+    width: 20%;
+    margin: 0 20px 0 0;
+    &:last-child {
+        margin: 0;
     }
+}
+
+// Section Seven
+#gallery {
+    .view-row {
+        .view-row-image {
+            margin: 0 4px 7px 0;
+            line-height: 0;
+
+        }
+        &#second-row {
+            flex-direction: row-reverse;
+            #even {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+        }
+        &#third-row {
+            transform: rotateX(180deg);
+        }
+
+    }
+}
+.contact, .services, .instagram-images {
+    width: 30%;
+    .title-sm {
+        text-transform: uppercase;
+    }
+}
+
+

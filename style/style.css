@@ -8260,14 +8260,14 @@ h1 {
   text-align: center;
 }
 
-h2, .rw-hover-effect .title {
+h2, .rw-hover-effect, .title-lg {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: inherit;
   color: #212529;
 }
 
-h3 {
+h3, .title-sm {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: inherit;
@@ -8480,7 +8480,7 @@ body .more-btn:hover::before, body .more-btn:hover::after {
   flex-direction: column;
   line-height: 1.5;
 }
-.view-row .rw-three-cols .border-wrap .rw-info .title {
+.view-row .rw-three-cols .border-wrap .rw-info .title-lg {
   color: #dfdfdf;
   padding-bottom: 1.5em;
 }
@@ -8516,4 +8516,25 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 }
 .logo-wrapper:last-child {
   margin: 0;
+}
+
+#gallery .view-row .view-row-image {
+  margin: 0 4px 7px 0;
+  line-height: 0;
+}
+#gallery .view-row#second-row {
+  flex-direction: row-reverse;
+}
+#gallery .view-row#second-row #even {
+  transform: rotateY(180deg);
+}
+#gallery .view-row#third-row {
+  transform: rotateX(180deg);
+}
+
+.contact, .services, .instagram-images {
+  width: 30%;
+}
+.contact .title-sm, .services .title-sm, .instagram-images .title-sm {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
