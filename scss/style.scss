@@ -34,7 +34,7 @@
 // main
 .container {
     #first {
-    background-image: url("bg-images/header-bg-img.jpg");
+    background-image: url("../images/header-bg-img.jpg");
     background-attachment: fixed;
     }
 }
@@ -230,7 +230,7 @@ body {
 
 // Section Three
 #third {
-    background: url("bg-images/bg-green.jpg") no-repeat fixed center / cover;
+    background: url("../images/bg-green.jpg") no-repeat fixed center / cover;
     h1, p, a, div {
         text-align: center;
         color: #ffffff;

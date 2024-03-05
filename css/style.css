@@ -10352,7 +10352,7 @@ readers do not read off random characters that represent icons */
   src: url(../fonts/OratorStd.ttf) format("truetype"), url(../fonts/OratorStd.eot) format("embedded-opentype"), url(../fonts/OratorStd.otf) format("opentype"), url(../fonts/OratorStd.woff) format("woff"), url(../fonts/OratorStd.woff2) format("woff2");
 }
 .container #first {
-  background-image: url("bg-images/header-bg-img.jpg");
+  background-image: url("../images/header-bg-img.jpg");
   background-attachment: fixed;
 }
 
@@ -10520,7 +10520,7 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 }
 
 #third {
-  background: url("bg-images/bg-green.jpg") no-repeat fixed center/cover;
+  background: url("../images/bg-green.jpg") no-repeat fixed center/cover;
 }
 #third h1, #third p, #third a, #third div {
   text-align: center;
