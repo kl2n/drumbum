@@ -3,6 +3,7 @@
     "watch:scss": "node-sass -w scss/style.scss css/style.css"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "node-sass": "^9.0.0"
   }
 }
