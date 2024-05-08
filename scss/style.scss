@@ -140,22 +140,34 @@ body {
 
 @mixin inline {
     width: 30%;
-    margin-right: 5em;
     position: relative;
+    /*margin-right: 5em;   
     &:last-child {
         margin-right: 0;
-    }
+    }*/
 }
 // Section One
 .main-menu {
+    position: relative;
+    top: 26px;
     .menu-left, .menu-right {
+        position: inherit;       
         display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
         width: 49%;   
     }
     .menu-left {
         .logo {
             width: 37px;;
+        }
+        .sitename {
+            font-family: "OratorStd", Arial, Helvetica, sans-serif;
+            font-size: 34px;
+            color: #fff;     
+        }
+        .logo, .sitename {
+            display: inline;
+            vertical-align: bottom;
         }
     }
     .menu-right {
@@ -174,6 +186,7 @@ body {
 #our-branches {
     .block-content {
         display: flex;
+        justify-content: space-between; 
     }
     .inline {
         @include inline;
@@ -273,11 +286,12 @@ body {
 // Section Four
 .view-row {
     display: flex;
+    justify-content: space-between;
     .rw-three-cols {
         position: relative;
         width: 31.8%;
         // width: calc((100% - 26em) / 2);
-        margin: 0 30px 20px 0;
+        margin-bottom: 20px;
         line-height: 0;
         &:nth-child(3n+3) {
             margin: 0 0 20px 0;
@@ -364,11 +378,7 @@ body {
 
 // Section Seven
 .logo-wrapper {
-    width: 20%;
-    margin: 0 20px 0 0;
-    &:last-child {
-        margin: 0;
-    }
+    width: 19%;
 }
 
 // Section Eight
@@ -400,9 +410,7 @@ body {
         p {
             font-size: 15px;
         }
-        .contact-detail span {
-            font-weight: 700;
-        }
+        
         .title-sm {
             text-transform: uppercase;
             padding: 15px 0;
@@ -410,6 +418,72 @@ body {
         }
         .services-list {
             line-height: 33px;
+        }
+    }
+    //CONTACT ADDRESS AND SOCIAL LINS
+    .contact-detail {
+        span {
+            font-weight: 700;
+        }
+        .social-links {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+            .fa-icon {
+                border: 1px solid;
+                border-radius: 5px;
+                padding: 7px;
+                width: 19px;
+                text-align: center;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        .facebook-icon {
+            // transform: translateX(50%);
+            
+            &::before {
+                font-family: "Font Awesome 6 Brands";
+                content: fa-content($fa-var-facebook-f);
+                
+            }
+            &:hover {
+                background-color: #1877F2;
+                color: #ffffff;
+            }
+        }
+        
+        .twitter-icon {
+            &::before {
+                font-family: "Font Awesome 6 Brands";
+                content: fa-content($fa-var-twitter);
+                
+            }
+            &:hover {
+                background-color: #1DA1F2;
+                color: #ffffff;
+            }
+        }
+        .instagram-icon {
+            &::before {
+                font-family: "Font Awesome 6 Brands";
+                content: fa-content($fa-var-instagram);
+            }
+            &:hover {
+                background-color: #fbad50;
+                color: #ffffff;
+            }
+            
+        }
+        .youtube-icon {
+            &::before {
+                font-family: "Font Awesome 6 Brands";
+                content: fa-content($fa-var-youtube);
+                
+            }
+            &:hover {
+                background-color: #FF0000;
+                color: #ffffff;
+            }
         }
     }
 
@@ -447,5 +521,3 @@ footer {
         padding: 2em 0;
     }
 }
-
-

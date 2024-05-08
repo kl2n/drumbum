@@ -10456,13 +10456,27 @@ body .more-btn:hover::before, body .more-btn:hover::after {
   margin-right: 10px;
 }
 
+.main-menu {
+  position: relative;
+  top: 26px;
+}
 .main-menu .menu-left, .main-menu .menu-right {
+  position: inherit;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 49%;
 }
 .main-menu .menu-left .logo {
   width: 37px;
+}
+.main-menu .menu-left .sitename {
+  font-family: "OratorStd", Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  color: #fff;
+}
+.main-menu .menu-left .logo, .main-menu .menu-left .sitename {
+  display: inline;
+  vertical-align: bottom;
 }
 .main-menu .menu-right .line1, .main-menu .menu-right .line2, .main-menu .menu-right .line3 {
   width: 30px;
@@ -10474,14 +10488,15 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 
 #our-branches .block-content {
   display: flex;
+  justify-content: space-between;
 }
 #our-branches .inline {
   width: 30%;
-  margin-right: 5em;
   position: relative;
-}
-#our-branches .inline:last-child {
-  margin-right: 0;
+  /*margin-right: 5em;   
+  &:last-child {
+      margin-right: 0;
+  }*/
 }
 #our-branches .inline .overlay {
   text-align: center;
@@ -10556,11 +10571,12 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 
 .view-row {
   display: flex;
+  justify-content: space-between;
 }
 .view-row .rw-three-cols {
   position: relative;
   width: 31.8%;
-  margin: 0 30px 20px 0;
+  margin-bottom: 20px;
   line-height: 0;
 }
 .view-row .rw-three-cols:nth-child(3n+3) {
@@ -10631,11 +10647,7 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 }
 
 .logo-wrapper {
-  width: 20%;
-  margin: 0 20px 0 0;
-}
-.logo-wrapper:last-child {
-  margin: 0;
+  width: 19%;
 }
 
 #section-eight::before {
@@ -10649,11 +10661,11 @@ body .more-btn:hover::before, body .more-btn:hover::after {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   width: 30%;
-  margin-right: 5em;
   position: relative;
-}
-#section-eight .inline:last-child {
-  margin-right: 0;
+  /*margin-right: 5em;   
+  &:last-child {
+      margin-right: 0;
+  }*/
 }
 #section-eight .inline .title-lg img, #section-eight .inline .title-lg h2 {
   display: inline-block;
@@ -10668,9 +10680,6 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 #section-eight .inline p {
   font-size: 15px;
 }
-#section-eight .inline .contact-detail span {
-  font-weight: 700;
-}
 #section-eight .inline .title-sm {
   text-transform: uppercase;
   padding: 15px 0;
@@ -10678,6 +10687,54 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 }
 #section-eight .inline .services-list {
   line-height: 33px;
+}
+#section-eight .contact-detail span {
+  font-weight: 700;
+}
+#section-eight .contact-detail .social-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+#section-eight .contact-detail .social-links .fa-icon {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 7px;
+  width: 19px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+#section-eight .contact-detail .facebook-icon::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f39e";
+}
+#section-eight .contact-detail .facebook-icon:hover {
+  background-color: #1877F2;
+  color: #ffffff;
+}
+#section-eight .contact-detail .twitter-icon::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f099";
+}
+#section-eight .contact-detail .twitter-icon:hover {
+  background-color: #1DA1F2;
+  color: #ffffff;
+}
+#section-eight .contact-detail .instagram-icon::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f16d";
+}
+#section-eight .contact-detail .instagram-icon:hover {
+  background-color: #fbad50;
+  color: #ffffff;
+}
+#section-eight .contact-detail .youtube-icon::before {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f167";
+}
+#section-eight .contact-detail .youtube-icon:hover {
+  background-color: #FF0000;
+  color: #ffffff;
 }
 
 #gallery .view-row {
