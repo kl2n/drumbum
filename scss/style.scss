@@ -36,6 +36,7 @@
     #section-one {
     background-image: url("../images/header-bg-img.jpg");
     background-attachment: fixed;
+    position: relative;
     }
 }
 h1 {
@@ -148,10 +149,14 @@ body {
 }
 // Section One
 .main-menu {
-    position: relative;
+    position: absolute;
     top: 26px;
-    .menu-left, .menu-right {
-        position: inherit;       
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    .menu-left, .menu-right {      
         display: inline-block;
         vertical-align: middle;
         width: 49%;   
@@ -172,12 +177,18 @@ body {
     }
     .menu-right {
         .line1, .line2, .line3 {
-            width: 30px;
+            width: 100%;
             height: 4px;
             display: block;
             background: white;
             margin-bottom: 5px;
         }
+    }
+    .menu-wrapper {
+        width: 30px;
+        text-align: right;
+        right: 0;
+        position: absolute;
     }
     
 }
