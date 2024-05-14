@@ -10397,7 +10397,7 @@ body a {
 body .more-btn {
   text-decoration: none;
   font-size: 13px;
-  color: #c4c4c4;
+  color: #aaa7a7;
   position: relative;
   padding: 5px 10px;
   box-sizing: border-box;
@@ -10541,18 +10541,18 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 #two-cols .quote h1::before {
   font-family: "Font Awesome 6 Free";
   content: "\f10d";
-  color: #c4c4c4;
+  color: #aaa7a7;
   font-size: 1.5em;
   display: block;
   padding-bottom: 0.4em;
 }
 #two-cols .quote .quotee {
   font-size: 13px;
-  color: #c4c4c4;
+  color: #aaa7a7;
 }
 #two-cols .quote p {
   font-size: 13px;
-  color: #c4c4c4;
+  color: #aaa7a7;
 }
 
 #section-four {
@@ -10655,6 +10655,44 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 
 #section-six {
   background-color: #e6e5e5;
+}
+
+.slide-container {
+  position: relative;
+}
+
+.slide {
+  text-align: center;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.controls .prev, .controls .next {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: transparent;
+}
+.controls .prev {
+  left: 0;
+}
+.controls .next {
+  right: 0;
+}
+.controls .prev::before, .controls .next::before {
+  display: block;
+  color: #aaa7a7;
+  font-size: 30px;
+}
+.controls .prev::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f104";
+}
+.controls .next::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f105";
 }
 
 .logo-wrapper {
@@ -10769,7 +10807,8 @@ footer {
   background-color: #3e4c55;
 }
 footer .copyright {
-  color: #c4c4c4;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #aaa7a7;
   text-align: center;
   padding: 2em 0;
 }/*# sourceMappingURL=style.css.map */

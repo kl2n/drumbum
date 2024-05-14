@@ -75,7 +75,7 @@ body {
     .more-btn {
         text-decoration: none;
         font-size: 13px;
-        color: #c4c4c4;
+        color: #aaa7a7;
         position: relative;
         padding: 5px 10px;
         box-sizing: border-box;
@@ -248,7 +248,7 @@ body {
             &::before {
                 font-family: "Font Awesome 6 Free";
                 content: fa-content($fa-var-quote-left);
-                color: #c4c4c4 ;
+                color: #aaa7a7 ;
                 font-size: 1.5em;
                 display: block;
                 padding-bottom: .4em;
@@ -257,11 +257,11 @@ body {
         
         .quotee {
             font-size: 13px;
-            color: #c4c4c4;
+            color: #aaa7a7;
         }
         p {
             font-size: 13px;
-            color: #c4c4c4;
+            color: #aaa7a7;
         }
     }
 }
@@ -385,6 +385,44 @@ body {
 // Section Six
 #section-six {
     background-color: #e6e5e5;
+}
+.slide-container {
+    position: relative;
+}
+.slide {
+    text-align: center;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+.controls {
+    .prev, .next {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: transparent;
+    }
+    .prev {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
+    .prev::before, .next::before {
+        display: block;
+        color: #aaa7a7;
+        font-size: 30px;
+    }
+    .prev::before {
+        font-family: "Font Awesome 6 Free";
+        content: fa-content($fa-var-angle-left);
+    }
+    .next::before {
+        font-family: "Font Awesome 6 Free";
+        content: fa-content($fa-var-angle-right);
+        
+    }
 }
 
 // Section Seven
@@ -527,7 +565,8 @@ body {
 footer {
     background-color: #3e4c55;
     .copyright {
-        color: #c4c4c4;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;;
+        color: #aaa7a7;
         text-align: center;
         padding: 2em 0;
     }
