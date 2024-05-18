@@ -180,7 +180,7 @@ body {
             width: 100%;
             height: 4px;
             display: block;
-            background: white;
+            background-color: white;
             margin-bottom: 5px;
         }
     }
@@ -204,7 +204,7 @@ body {
         .overlay {
             text-align: center;
             visibility: hidden;
-            background: white;
+            background-color: white;
             position: absolute;
             bottom: 10%;
             width: 100%;
@@ -284,7 +284,7 @@ body {
             .date {
                 font-weight: 700;
                 padding: 18px;
-                background: rgba(255, 255, 255, 0.7);
+                background-color: rgba(255, 255, 255, 0.7);
                 width: 70px;
                 border-radius: 5px;
                 color: #212529;
@@ -361,7 +361,7 @@ body {
             }
             .rw-hover-effect {
                 visibility: visible;
-                background: rgba(26, 26, 25, 0.8);
+                background-color: rgba(26, 26, 25, 0.8);
                 -webkit-transform: scale(1);
                 -moz-transform: scale(1);
                 -ms-transform: scale(1);
@@ -392,16 +392,30 @@ body {
 .slide {
     text-align: center;
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    margin-bottom: 24px;
+    display: none;
 }
 .controls {
+    box-sizing: border-box;
+    text-align: center;
     .prev, .next {
         display: inline-block;
         position: absolute;
         top: 50%;
         width: 50px;
-        height: 50px;
+        height: 56px;
         text-align: center;
         color: transparent;
+        user-select: none;
+        line-height: 54px;
+        border-radius: 4px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    .prev:hover, .next:hover {
+        background-color: #3e4c55;
     }
     .prev {
         left: 0;
@@ -413,6 +427,7 @@ body {
         display: block;
         color: #aaa7a7;
         font-size: 30px;
+        cursor: pointer;
     }
     .prev::before {
         font-family: "Font Awesome 6 Free";
@@ -422,6 +437,21 @@ body {
         font-family: "Font Awesome 6 Free";
         content: fa-content($fa-var-angle-right);
         
+    }
+}
+.slide-counter {
+    box-sizing: border-box;
+    text-align: center;
+    .pager {
+        display: inline-block;
+        width: 36px;
+        height: 3px;
+        background-color: #aaa7a7;
+        margin: 0 3px;
+        cursor: pointer;
+        &:hover, &.enable {
+            background-color: #3e4c55;
+        }
     }
 }
 
@@ -484,6 +514,9 @@ body {
                 padding: 7px;
                 width: 19px;
                 text-align: center;
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                -mz-transition: all 0.5s ease-in-out;
                 transition: all 0.5s ease-in-out;
             }
         }
