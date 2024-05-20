@@ -10656,6 +10656,12 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 #section-six {
   background-color: #e6e5e5;
 }
+#section-six:hover .prev::before, #section-six:hover .next::before {
+  opacity: 1;
+}
+#section-six:hover .prev, #section-six:hover .next {
+  background-color: rgba(62, 76, 85, 0.8);
+}
 
 .slide-container {
   position: relative;
@@ -10666,8 +10672,18 @@ body .more-btn:hover::before, body .more-btn:hover::after {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   margin-bottom: 24px;
   display: none;
+  animation-name: fade;
+  animation-duration: 2s;
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .controls {
   box-sizing: border-box;
   text-align: center;
@@ -10675,7 +10691,7 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 .controls .prev, .controls .next {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 25%;
   width: 50px;
   height: 56px;
   text-align: center;
@@ -10687,9 +10703,6 @@ body .more-btn:hover::before, body .more-btn:hover::after {
   border-radius: 4px;
   transition: all 0.3s ease;
 }
-.controls .prev:hover, .controls .next:hover {
-  background-color: #3e4c55;
-}
 .controls .prev {
   left: 0;
 }
@@ -10698,7 +10711,8 @@ body .more-btn:hover::before, body .more-btn:hover::after {
 }
 .controls .prev::before, .controls .next::before {
   display: block;
-  color: #aaa7a7;
+  color: #fff;
+  opacity: 0;
   font-size: 30px;
   cursor: pointer;
 }
