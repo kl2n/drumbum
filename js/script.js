@@ -1,10 +1,27 @@
+(function($) {
+    $(document).on('click', '.down-arrow', function(evt) {
+       evt.preventDefault(); // Prevent default hash behavior
+ 
+       const targetId = $(this).attr('href'); // Get the href (e.g., #section1)
+       const targetElement = $(targetId); // Target element
+ 
+       if (targetElement.length) {
+          $('html, body').animate({
+             scrollTop: targetElement.offset().top // Scroll to the element
+          }, 100, function() {
+             // Remove hash from the URL after scrolling
+             history.replaceState(null, null, ' ');
+          });
+       }
+    });
+ })(window.jQuery);
+
+
 $(function() {
-    //Event date for two months from now
-    let newDate = new Date();
-    let day = newDate.getDate();
-    let month = newDate.getMonth() + 2;
-    let year = newDate.getFullYear();
-    // console.log(day, month, year);
+    let eventDate = moment().add(3, 'day').add(1, 'months');
+    let day = eventDate.format("DD");
+    let month = eventDate.format("MM");
+    let year = eventDate.format("YYYY");
     document.getElementById('event-day').innerHTML = day;
     document.getElementById('event-month').innerHTML = month;
     document.getElementById('event-year').innerHTML = year;
@@ -25,7 +42,7 @@ $(function() {
  }
 
  function SlideShow(n) {
-     let slides = document.getElementsByClassName("slide");
+     let slides = document.getElementsByClassName("slide__wrapper");
      let pagers = document.getElementsByClassName("pager");
      // Loop Start
      if (n > slides.length) {
@@ -49,3 +66,4 @@ $(function() {
      slides[slidePosition-1].style.display = "block";
      pagers[slidePosition-1].className += " enable";
  } 
+
