@@ -5,9 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.1" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         <title>Drumbum</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -23,17 +20,26 @@
                 <!-- Section One -->
                 <section id="section-one">
                     <div class="block-conent">
-                        <div class="main-menu">
-                            <div class="menu-left">
+                        <div class="header">
+                            <div class="header__left">
                                 <div class="logo"><img src="images/drumbum-logo.png" title="Logo" alt="Drumbum Logo" /></div>
                                 <div class="sitename">Drumbum</div>
                             </div>
-                            <div class="menu-right">
-                                <div class="menu-wrapper">
-                                    <span class="line1"></span>
-                                    <span class="line2"></span>
-                                    <span class="line3"></span>
+                            <div class="header__right">
+                                <div class="menu__bar" id="menu">
+                                    <span class="menu__bar__b1"></span>
+                                    <span class="menu__bar__b2"></span>
+                                    <span class="menu__bar__b3"></span>
                                 </div>
+                                <nav class="nav-menu" id="navbar">
+                                    <ul class="main-menu">
+                                        <li><a href="#our-branches">Our Branches</a></li>
+                                        <li><a href="#about-us">About Us</a></li>
+                                        <li><a href="#events">Events</a></li>
+                                        <li><a href="#our-works">Our Works</a></li>
+                                        <li><a href="#our-partners">Our Partners</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                         <!-- write scss style to get this design. below is my html code  -->
@@ -69,7 +75,7 @@
                 </section>
                 <!-- Section Three -->
                 <section id="section-three">
-                    <div class="content-sm-width" id="two-cols">
+                    <div class="content-sm-width two-cols " id="about-us">
                         <div class="block-content">
                             <div class="left">
                                 <div class="quote">
@@ -82,17 +88,17 @@
                                 <h3>We are creative just like you</h3>
                                 <p>Donec a mi ut ante rutrum dictum sit amet id nunc. Proin in vestibulum justo, in cursus risus. Praesent finibus enim turpis, interdum viverra felis vestibulum a. Quisque suscipit magna eu metus varius tempus.</p>
                                 <p>Donec a mi ut ante rutrum dictum sit amet id nunc. Proin in vestibulum justo, in cursus risus. Praesent finibus enim turpis, interdum viverra felis vestibulum a. Quisque suscipit magna eu metus varius tempus.</p>
-                                <a class="more-btn" href="#three-cols">Learn More</a>
+                                <a class="more-btn" href="#">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- Section Four -->
                 <section id="section-four">
-                    <div class="content-lg-width">
+                    <div class="content-lg-width" id="events">
                         <div class="block-content">
                             <h1>We Are Holding An Event</h1>
-                            <p>register <a href="#three-cols">here</a></p>
+                            <p>register <a href="#contact-us">here</a></p>
                             <div class="event__day">
                                 <div class="event__day__wrapper">
                                     <div class="event__day__number" id="event-day">{day}</div>
@@ -228,7 +234,7 @@
 
                 <!-- Section Eight -->
                 <section id="section-eight">
-                    <div class="content-sm-width">
+                    <div class="content-sm-width" id="contact-us">
                         <div class="block-content">
                             <div class="view-row">
                                 <div class="inline" id="contact">
@@ -310,5 +316,9 @@
                 </div>
             </footer>
         </div>
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     </body>  
 </html>
