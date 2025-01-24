@@ -35,7 +35,7 @@ menuItems.forEach(item => {
         menu.classList.remove("visible"); 
         navBar.classList.remove("sideMenu");
     });
-});
+}); 
 
 $(function() {
     let eventDate = moment().add(3, 'day').add(1, 'months');
